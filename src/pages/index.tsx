@@ -23,6 +23,7 @@ const IndexPage = () => {
               alt="Karolína & Jakub"
               src="../images/karolina_jakub.jpeg"
               width={500}
+              quality={100}
             />
           </div>
           <div className="flex justify-center text-md font-bold pt-12">
