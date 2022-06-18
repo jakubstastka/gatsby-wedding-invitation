@@ -23,6 +23,7 @@ const IndexPage = () => {
               alt="Karolína & Jakub"
               src="../images/karolina_jakub.jpg"
               width={500}
+              height={375}
               quality={100}
             />
           </div>
