@@ -21,7 +21,7 @@ const IndexPage = () => {
           <div className="flex justify-center lg:text-9xl md:text-7xl sm:text-5xl font-bold pt-12">
             <StaticImage
               alt="Karolína & Jakub"
-              src="../images/karolina_jakub.jpeg"
+              src="../images/karolina_jakub.jpg"
               width={500}
               quality={100}
             />
