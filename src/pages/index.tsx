@@ -22,8 +22,8 @@ const IndexPage = () => {
             <StaticImage
               alt="Karolína & Jakub"
               src="../images/karolina_jakub.jpg"
-              width={500}
-              height={375}
+              width={375}
+              height={500}
               quality={100}
             />
           </div>
