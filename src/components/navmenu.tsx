@@ -39,10 +39,7 @@ export default function NavMenu() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.href === window.location.pathname
-                            ? "bg-emerald-800 text-white"
-                            : "text-white hover:bg-emerald-600 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                          "text-white hover:bg-emerald-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                         )}
                       >
                         {item.name}
@@ -62,10 +59,7 @@ export default function NavMenu() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.href === window.location.pathname
-                      ? "bg-emerald-900 text-white"
-                      : "text-white hover:bg-emerald-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
+                    "text-white hover:bg-emerald-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   )}
                 >
                   {item.name}
