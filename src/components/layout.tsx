@@ -23,7 +23,7 @@ const Layout = ({ pageTitle, children }: any) => {
           {data.site.siteMetadata.title}
         </h1>
         <NavMenu />
-        <div className="pl-3 pb-3">{children}</div>
+        <div className="p-3">{children}</div>
       </main>
     </div>
   );
