@@ -1,19 +1,34 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Divider from "../components/divider";
+import { StaticImage } from "gatsby-plugin-image";
 
 const BlogPage = ({ data }: any) => {
   return (
     <Layout pageTitle="O nás">
       {data.allMdx.nodes.map((node: any) => (
         <article key={node.id}>
-          <div className="text-2xl text-emerald-600 pt-5 pb-2">
-            {node.frontmatter.title}
-          </div>
-          <div className="text-base">
-            {node.frontmatter.author === "Jakub" ? "Napsal " : "Napsala "}
-            {node.frontmatter.author}
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <StaticImage
+                src="../../images/placeholder.png"
+                alt="Placeholder"
+              />
+            </div>
+            <div className="pt-5 pb-2">
+              <Link
+                className="text-4xl text-emerald-600"
+                to={`/o-nas/${node.slug}`}
+              >
+                {node.frontmatter.title}
+              </Link>
+              <div className="text-base">
+                {node.frontmatter.author === "Jakub" ? "Napsal " : "Napsala "}
+                {node.frontmatter.author}
+              </div>
+            </div>
+            <div className="pt-5 pb-2">Summary here</div>
           </div>
           <Divider color="grey" />
         </article>
@@ -30,6 +45,7 @@ export const query = graphql`
           title
           author
         }
+        slug
         id
         body
       }

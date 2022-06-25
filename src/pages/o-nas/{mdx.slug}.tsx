@@ -11,6 +11,9 @@ const BlogPage = ({ data }: any) => {
           {data.mdx.frontmatter.title}
         </h2>
         <div className="pt-5">
+          <MDXRenderer>{data.mdx.frontmatter.summary}</MDXRenderer>
+        </div>
+        <div className="pt-5">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
       </article>
@@ -23,6 +26,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        summary
       }
       body
     }

@@ -31,18 +31,4 @@ const IndexPage = ({ data }: any) => {
   );
 };
 
-export const query = graphql`
-  query {
-    allMdx {
-      nodes {
-        frontmatter {
-          title
-        }
-        id
-        slug
-      }
-    }
-  }
-`;
-
 export default IndexPage;
