@@ -39,9 +39,13 @@ const BlogPage = ({ data }: any) => {
 
 export const query = graphql`
   query {
-    allMdx(filter: { fileAbsolutePath: { regex: "/(o-nas)/" } }) {
+    allMdx(
+      filter: { fileAbsolutePath: { regex: "/(o-nas)/" } }
+      sort: { fields: frontmatter___sort_value, order: ASC }
+    ) {
       nodes {
         frontmatter {
+          sort_value
           title
           author
           image {
