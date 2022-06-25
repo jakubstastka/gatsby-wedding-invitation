@@ -2,17 +2,17 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Divider from "../components/divider";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const BlogPage = ({ data }: any) => {
   return (
     <Layout pageTitle="O nás">
       {data.allMdx.nodes.map((node: any) => (
         <article key={node.id}>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 pt-2">
             <div>
-              <StaticImage
-                src="../../images/placeholder.png"
+              <GatsbyImage
+                image={getImage(node.frontmatter.image)}
                 alt="Placeholder"
               />
             </div>
@@ -28,7 +28,7 @@ const BlogPage = ({ data }: any) => {
                 {node.frontmatter.author}
               </div>
             </div>
-            <div className="pt-5 pb-2">Summary here</div>
+            <div className="pt-5 pb-2 pr-5">{node.frontmatter.summary}</div>
           </div>
           <Divider color="grey" />
         </article>
@@ -44,6 +44,12 @@ export const query = graphql`
         frontmatter {
           title
           author
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          summary
         }
         slug
         id
