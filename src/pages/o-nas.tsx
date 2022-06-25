@@ -24,7 +24,9 @@ const BlogPage = ({ data }: any) => {
                 {node.frontmatter.title}
               </Link>
               <div className="text-base">
-                {node.frontmatter.author === "Jakub" ? "Napsal " : "Napsala "}
+                {!node.frontmatter.author.endsWith("a")
+                  ? "Napsal "
+                  : "Napsala "}
                 {node.frontmatter.author}
               </div>
             </div>
