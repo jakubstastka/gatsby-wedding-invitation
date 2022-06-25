@@ -52,7 +52,7 @@ export const query = graphql`
           author
           image {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(width: 300)
             }
           }
           summary

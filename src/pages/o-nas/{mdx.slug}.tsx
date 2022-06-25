@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../../components/layout";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const BlogPage = ({ data }: any) => {
   return (
@@ -10,8 +11,19 @@ const BlogPage = ({ data }: any) => {
         <h2 className="text-4xl text-emerald-700">
           {data.mdx.frontmatter.title}
         </h2>
-        <div className="pt-5">
-          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <div class="grid grid-cols-3 gap-4">
+          <div className="pt-5">
+            <GatsbyImage
+              image={getImage(data.mdx.frontmatter.image)}
+              alt={data.mdx.frontmatter.image_alt}
+            />
+            <span className="text-base italic pt-5">
+              {data.mdx.frontmatter.image_alt}
+            </span>
+          </div>
+          <div className="pt-5 col-span-2">
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </div>
         </div>
       </article>
     </Layout>
@@ -23,6 +35,12 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        image_alt
       }
       body
     }
