@@ -31,6 +31,14 @@ const config: GatsbyConfig = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "o-nas",
+        path: `${__dirname}/o-nas`,
+      },
+      __key: "o-nas",
+    },
   ],
 };
 
