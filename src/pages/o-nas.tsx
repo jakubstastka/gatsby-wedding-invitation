@@ -9,7 +9,7 @@ const BlogPage = ({ data }: any) => {
     <Layout pageTitle="O nás">
       {data.allMdx.nodes.map((node: any) => (
         <article key={node.id}>
-          <div className="grid grid-cols-3 gap-4 pt-2">
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 pt-2">
             <div>
               <GatsbyImage
                 image={getImage(node.frontmatter.image)}

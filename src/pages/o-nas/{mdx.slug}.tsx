@@ -11,7 +11,7 @@ const BlogPage = ({ data }: any) => {
         <h2 className="text-4xl text-emerald-700">
           {data.mdx.frontmatter.title}
         </h2>
-        <div class="grid grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
           <div className="pt-5">
             <GatsbyImage
               image={getImage(data.mdx.frontmatter.image)}
