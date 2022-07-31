@@ -18,7 +18,7 @@ const IndexPage = ({ data }: any) => {
         <div className="h-500 grid content-center">
           <div className="text-4xl pb-5">Budeme se brát!</div>
           <div className="text-xl">
-            Své <strong>ano</strong> si řekneme 22. 10. 2022 ve 13 hodin v
+            Své <strong>ano</strong> si řekneme 24. 9. 2022 ve 13 hodin v
             Obřadní síni Vlašského dvora v Kutné Hoře.
           </div>
           <div className="text-base pt-5">
