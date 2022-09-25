@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage = ({ data }: any) => {
   return (
-    <Layout pageTitle="Budeme se brát!">
+    <Layout pageTitle="Vzali jsme se!">
       <div className="grid grid-cols-2 gap-2 p-5">
         <div>
           <StaticImage
