@@ -10,20 +10,26 @@ const IndexPage = ({ data }: any) => {
       <div className="grid grid-cols-2 gap-2 p-5">
         <div>
           <StaticImage
-            src="../../images/karolina_jakub.jpg"
+            src="../../images/karolina_jakub_svatba.jpg"
             alt="Karolína a Jakub"
             height={600}
+            quality={100}
           />
         </div>
-        <div className="h-500 grid content-center">
-          <div className="text-4xl pb-5">Budeme se brát!</div>
+        <div className="h-500 grid content-center space-y-4">
+          <div className="text-4xl pb-5">Vzali jsme se!</div>
           <div className="text-xl">
-            Své <strong>ano</strong> si řekneme 24. 9. 2022 ve 13 hodin v
+            Své <strong>ano</strong> jsme si řekli 24. 9. 2022 ve 13 hodin v
             Obřadní síni Vlašského dvora v Kutné Hoře.
           </div>
+          <div className="text-xl">
+            Děkujeme všem, kteří s námi prožili náš den. Připravujeme fotografii
+            a report ze svatby, která bez přehánění neměla obdoby!
+          </div>
           <div className="text-base pt-5">
-            Pokud nám chcete něco napsat, můžete tak učinit na
-            <strong> svatba@stastka.xyz</strong>.
+            Pokud jste na naší svatbě fotili, oceníme, když nám zašlete
+            fotografie na <strong> svatba@stastka.xyz</strong>, abychom je mohli
+            vystavit na našem webu.
           </div>
         </div>
       </div>
