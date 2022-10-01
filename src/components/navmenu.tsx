@@ -6,6 +6,7 @@ import React from "react";
 const navigation = [
   { name: "Hlavní stránka", href: "/" },
   { name: "O nás", href: "/o-nas" },
+  { name: "Fotogalerie", href: "https://fotky.svatba.stastka.xyz" },
 ];
 
 function classNames(...classes: string[]) {
