@@ -14,6 +14,7 @@ const BlogPage = ({ data }: any) => {
               <GatsbyImage
                 image={getImage(node.frontmatter.image)}
                 alt="Placeholder"
+                quality={100}
               />
             </div>
             <div className="pt-5 pb-2">
@@ -43,7 +44,7 @@ export const query = graphql`
   query {
     allMdx(
       filter: { fileAbsolutePath: { regex: "/(o-nas)/" } }
-      sort: { fields: frontmatter___sort_value, order: ASC }
+      sort: { fields: frontmatter___sort_value, order: DESC }
     ) {
       nodes {
         frontmatter {

@@ -16,6 +16,7 @@ const BlogPage = ({ data }: any) => {
             <GatsbyImage
               image={getImage(data.mdx.frontmatter.image)}
               alt={data.mdx.frontmatter.image_alt}
+              quality={100}
             />
             <span className="text-base italic pt-5">
               {data.mdx.frontmatter.image_alt}
