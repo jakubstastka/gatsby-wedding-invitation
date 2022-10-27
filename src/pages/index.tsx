@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const IndexPage = ({ data }: any) => {
   return (
     <Layout pageTitle="Vzali jsme se!">
-      <div className="grid grid-cols-2 gap-2 p-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
         <div>
           <StaticImage
             src="../../images/karolina_jakub_svatba.jpg"
@@ -25,11 +25,6 @@ const IndexPage = ({ data }: any) => {
           <div className="text-xl">
             Děkujeme všem, kteří s námi prožili náš den. Připravujeme fotografii
             a report ze svatby, která bez přehánění neměla obdoby!
-          </div>
-          <div className="text-base pt-5">
-            Pokud jste na naší svatbě fotili, oceníme, když nám zašlete
-            fotografie na <strong> svatba@stastka.xyz</strong>, abychom je mohli
-            vystavit na našem webu.
           </div>
         </div>
       </div>

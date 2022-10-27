@@ -18,8 +18,8 @@ const Layout = ({ pageTitle, children }: any) => {
       <title>
         {pageTitle} | {data.site.siteMetadata.title}
       </title>
-      <main>
-        <h1 className="text-8xl font-bold pt-5 pb-5 text-center text-emerald-500">
+      <main className="p-3">
+        <h1 className="text-7xl font-bold pt-5 pb-5 text-center text-emerald-500">
           {data.site.siteMetadata.title}
         </h1>
         <NavMenu />
