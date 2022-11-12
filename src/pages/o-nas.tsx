@@ -1,10 +1,27 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import Divider from "../components/divider";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, GatsbyImageProps, getImage } from "gatsby-plugin-image";
 
-const BlogPage = ({ data }: any) => {
+type Props = {
+  allMdx: {
+    nodes: {
+      id: string;
+      slug: string;
+      frontmatter: {
+        title: string;
+        author: string;
+        summary: string;
+        sort_value: number;
+        image: GatsbyImageProps;
+      };
+      body: string;
+    }[];
+  };
+};
+
+const BlogPage = ({ data }: PageProps<Props>) => {
   return (
     <Layout pageTitle="O nás">
       {data.allMdx.nodes.map((node: any) => (
@@ -12,9 +29,8 @@ const BlogPage = ({ data }: any) => {
           <div className="grid sm:grid-cols-1 sm:gap-0 md:grid-cols-3 md:gap-4 pt-2">
             <div>
               <GatsbyImage
-                image={getImage(node.frontmatter.image)}
+                image={getImage(node.frontmatter.image)!}
                 alt={node.frontmatter.title}
-                quality={100}
               />
             </div>
             <div className="pt-5 pb-2">

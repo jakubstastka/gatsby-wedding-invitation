@@ -1,6 +1,10 @@
 import React from "react";
 
-const Divider = ({ color }) => (
+type Props = {
+  color: string;
+};
+
+const Divider = ({ color }: Props) => (
   <hr
     style={{
       color: color,

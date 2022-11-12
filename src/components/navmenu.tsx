@@ -1,6 +1,5 @@
-import { Fragment, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import React from "react";
 
 const navigation = [
@@ -8,10 +7,6 @@ const navigation = [
   { name: "O nás", href: "/o-nas" },
   { name: "Fotogalerie", href: "https://fotky.svatba.stastka.xyz" },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function NavMenu() {
   return (
@@ -38,9 +33,9 @@ export default function NavMenu() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className={classNames(
+                        className={
                           "text-white hover:bg-emerald-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                        )}
+                        }
                       >
                         {item.name}
                       </a>
@@ -58,9 +53,9 @@ export default function NavMenu() {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={classNames(
+                  className={
                     "text-white hover:bg-emerald-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  )}
+                  }
                 >
                   {item.name}
                 </Disclosure.Button>
